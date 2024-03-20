@@ -34,6 +34,9 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 
+	compileOnly 'org.projectlombok:lombok:1.18.32'
+	annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
 	//	E2E tests
 	runtimeOnly "org.junit.vintage:junit-vintage-engine:5.8.2"
 	testImplementation 'io.cucumber:cucumber-core:6.8.0'
