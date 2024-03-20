@@ -25,7 +25,7 @@ public class ProductsController {
     // Handles HTTP POST requests to create a new product.
 
     @PostMapping
-    //@ResponseStatus(HttpStatus.CREATED) annotation sets the
+    // @ResponseStatus(HttpStatus.CREATED) annotation sets the
     // HTTP status code to 201 (Created) for the createProduct method.
     @ResponseStatus(HttpStatus.CREATED)
     public Product createProduct(@RequestBody Product product) {
@@ -47,14 +47,8 @@ public class ProductsController {
 
     // Handles HTTP GET requests to retrieve a product by its ID.
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable String id){
+    public Product getProductById(@PathVariable String id) {
         return productsService.getProductById(id); // Delegates the retrieval operation to the ProductService.
-    }
-
-    // Handles HTTP GET requests to retrieve all products with a specific price.
-    @GetMapping("/{price}")
-    public List<Product> getAllProductsByPrice(@PathVariable double price) {
-        return productsService.findAllProductsByPrice(price); // Delegates the retrieval operation to the ProductService.
     }
 
     // Handles HTTP PUT requests to update an existing product.
